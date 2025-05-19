@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import numpy as np  # ajoutez en haut avec vos autres imports
 
 st.title("Dashboard de Prévision Financière")
 
@@ -181,7 +182,7 @@ df_hypotheses = pd.DataFrame({
         'Taux occ. Chiffres (%)', 'Répartition Pack1 (%)', 'Répartition Pack2 (%)', 'Répartition Pack3 (%)'
     ],
     'Brasero': [
-        brasero_cost, brasero_life, brasero_days, '-', b_pack1*100, b_pack2*100, b_pack3*100
+        brasero_cost, brasero_life, brasero_days, np.nan, b_pack1*100, b_pack2*100, b_pack3*100
     ],
     'Chiffres lumineux': [
         chiffres_cost, chiffres_life, round(chiffres_days,1), chiffres_rate*100,
